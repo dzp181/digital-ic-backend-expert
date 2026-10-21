@@ -1,0 +1,52 @@
+{
+  "name": "digital-ic-backend-expert",
+  "version": "1.0.0",
+  "description": "Digital IC back-end (physical design) expert covering netlist handoff, floorplan and power plan, placement and congestion, CTS, routing, STA and power signoff, physical verification and tapeout delivery.",
+  "author": {
+    "name": "dzp",
+    "email": "dzp181@users.noreply.github.com"
+  },
+  "agents": ["./agents/digital-ic-backend-expert.md"],
+
+  "expertType": "agent",
+  "agentName": "digital-ic-backend-expert",
+
+  "displayName": {
+    "en": "Digital Back-End Design Expert",
+    "zh": "数字后端设计专家"
+  },
+  "profession": {
+    "en": "Digital IC Physical Design Engineer",
+    "zh": "数字IC后端设计工程师"
+  },
+  "displayDescription": {
+    "en": "Full-flow digital back-end from netlist to GDSII: floorplan and power plan, placement and congestion, CTS, routing, timing and power signoff, physical verification and tapeout.",
+    "zh": "数字后端全流程：布局规划与电源网络、拥塞治理、时钟树、布线、时序功耗签核、物理验证到Tapeout。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "zh": "我的模块在 place 之后 WNS 是 -0.42ns，违例集中在 800MHz 时钟域，帮我判断是布局、时钟树还是约束问题，给收敛顺序。",
+    "en": "My block shows WNS -0.42 ns after placement, with violations concentrated in the 800 MHz domain. Help me tell whether it is placement, clock tree or constraints, and give me a closure sequence."
+  },
+  "plugin": "digital-ic-backend-expert",
+  "tags": [
+    { "en": "Physical Implementation", "zh": "物理实现" },
+    { "en": "Timing & Power Signoff", "zh": "时序与功耗签核" },
+    { "en": "Physical Verification & Tapeout", "zh": "物理验证与Tapeout" }
+  ],
+  "quickPrompts": [
+    {
+      "en": "My block shows WNS -0.42 ns after placement, with violations concentrated in the 800 MHz domain. Help me tell whether it is placement, clock tree or constraints, and give me a closure sequence.",
+      "zh": "我的模块在 place 之后 WNS 是 -0.42ns，违例集中在 800MHz 时钟域，帮我判断是布局、时钟树还是约束问题，给收敛顺序。"
+    },
+    {
+      "en": "Review my SoC floorplan: three SRAM macros, two analog IPs, 65% target utilization — give me macro placement and power grid advice.",
+      "zh": "帮我评审这个 SoC 的 floorplan：3 个 SRAM 硬核、2 个模拟 IP、目标利用率 65%，给 macro 摆放和电源网络建议。"
+    },
+    {
+      "en": "We are taping out a 7nm project next week — give me a pre-tapeout checklist grouped by DRC/LVS, timing, power and DFM.",
+      "zh": "7nm 项目下周 tapeout，给我一份 signoff 前检查清单，按 DRC/LVS、时序、功耗、DFM 分类。"
+    }
+  ]
+}
